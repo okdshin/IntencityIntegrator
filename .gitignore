@@ -4,6 +4,7 @@
 *.out
 *.txt
 *.dat
+*.csv
 .*.swp
 *.sh
 *neuria*
