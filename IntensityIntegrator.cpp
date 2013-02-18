@@ -25,10 +25,21 @@ int main(int argc, char* argv[])
 		% result_csv_file_name
 		% intencity_column_index
 	<< std::endl;
+	boost::filesystem::ifstream dal_file(dal_file_name);
+	if(!dal_file){
+		std::cout << "invalid dal file name." << std::endl;	
+		return 0;
+	}
+	
+	boost::filesystem::ofstream result_csv_file(result_csv_file_name);
+	if(!result_csv_file){
+		std::cout << "invalid save csv file name." << std::endl;	
+		return 0;
+	}
 
 	IntegrateIntencity(
 		intencity_column_index, 
-		dal_file_name, result_csv_file_name);
+		dal_file, dal_file_name, result_csv_file);
 
 	return 0;
 

@@ -15,9 +15,9 @@ namespace none
 {
 auto IntegrateIntencity(
 		unsigned int intencity_column_index, 
+		std::ifstream& dal_file,
 		const boost::filesystem::path& dal_file_name,
-		const boost::filesystem::path& result_csv_file_name) -> void {
-	boost::filesystem::ifstream dal_file(dal_file_name);
+		std::ofstream& result_csv_file) -> void {
 	std::vector<std::string> file_name_list;
 	std::vector<unsigned int> frame_max_list;
 	std::string line;
@@ -67,7 +67,6 @@ auto IntegrateIntencity(
 		result_column_list.push_back(result_column);
 	}
 
-	boost::filesystem::ofstream result_csv_file(result_csv_file_name);
 	for(unsigned int x = 0; x < index_max; ++x){
 		for(unsigned int y = 0; y < result_column_list.size(); ++y){
 			result_csv_file << result_column_list.at(y).at(x) << " ";
