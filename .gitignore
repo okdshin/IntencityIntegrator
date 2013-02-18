@@ -3,7 +3,6 @@
 *.o
 *.out
 *.txt
-*.dat
 *.csv
 .*.swp
 *.sh
