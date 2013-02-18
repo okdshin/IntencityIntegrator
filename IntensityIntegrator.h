@@ -11,7 +11,7 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/format.hpp>
 
-namespace none
+namespace intencity_integrator
 {
 auto IntegrateIntencity(
 		unsigned int intencity_column_index, 
