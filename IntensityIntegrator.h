@@ -13,7 +13,7 @@
 
 namespace intencity_integrator
 {
-auto IntegrateIntencity(
+inline auto IntegrateIntencity(
 		unsigned int intencity_column_index, 
 		std::ifstream& dal_file,
 		const boost::filesystem::path& dal_file_name,
